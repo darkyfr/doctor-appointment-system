@@ -83,7 +83,7 @@ export default function MyAppointments() {
                 <td><span className={`badge badge-${a.status?.toLowerCase()}`}>{a.status}</span></td>
                 <td><span className={`badge badge-${a.paymentStatus === 'PAID' ? 'confirmed' : 'pending'}`}>{a.paymentStatus}</span></td>
                 <td>
-                  {a.paymentStatus !== 'PAID' && (
+                  {a.paymentStatus !== 'PAID' && a.status === 'CONFIRMED' && (
                     <button
                       className="btn btn-primary"
                       style={{ padding: '4px 12px', fontSize: 13 }}
